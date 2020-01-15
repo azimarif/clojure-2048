@@ -3,7 +3,7 @@
 ;constants
 (def ZERO-SYMBOL 0)
 (def MAX-ELEMENTS-TO-BE-ADDED 2)
-(def ROW-SIZE 4)
+(def COLUMN-SIZE 4)
 
 (def not-zero (comp not zero?))
 
@@ -18,7 +18,7 @@
             (partial filter not-zero)))
 
 (def padd-left (comp
-                 (partial take ROW-SIZE)
+                 (partial take COLUMN-SIZE)
                  #(concat % (repeat ZERO-SYMBOL))))
 
 (def move-left (comp
